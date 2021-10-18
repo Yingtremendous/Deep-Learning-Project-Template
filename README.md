@@ -83,11 +83,18 @@ do_train(cfg, model, train_loader, val_loader, optimizer, None, F.cross_entropy)
 │
 ├──  configs  
 │    └── train_mnist_softmax.yml  - here's the specific config file for specific model or dataset.
-│ 
+            SOLVER TEST OUTPUT_DIR
 │
 ├──  data  
+     └── __init__.py
 │    └── datasets  - here's the datasets folder that is responsible for all data handling. (MNIST)
+           __init__.py 
+           mnist.py (import datasets from torchvision)
 │    └── transforms  - here's the data preprocess folder that is responsible for all data augmentation.
+           __init__.py
+           build.py    **build_transforms" 对PIL.image进行变换。 is_train=Train as arguemnt, Then if is_train:-...
+                        T.compose -> T.sequential
+           Transforms.py **RandomErasing** function from paper: Random Erasing data augmentation
 │    └── build.py  		   - here's the file to make dataloader.
 │    └── collate_batch.py   - here's the file that is responsible for merges a list of samples to form a mini-batch.
 │
