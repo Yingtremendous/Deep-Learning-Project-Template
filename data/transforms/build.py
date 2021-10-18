@@ -20,6 +20,7 @@ def build_transforms(cfg, is_train=True):
             normalize_transform,
             RandomErasing(probability=cfg.INPUT.PROB, mean=cfg.INPUT.PIXEL_MEAN)
         ])
+   # transfroms.Compose: compose several transfroms together
     else:
         transform = T.Compose([
             T.Resize(cfg.INPUT.SIZE_TEST),
