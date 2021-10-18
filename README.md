@@ -86,7 +86,7 @@ do_train(cfg, model, train_loader, val_loader, optimizer, None, F.cross_entropy)
 │ 
 │
 ├──  data  
-│    └── datasets  - here's the datasets folder that is responsible for all data handling.
+│    └── datasets  - here's the datasets folder that is responsible for all data handling. (MNIST)
 │    └── transforms  - here's the data preprocess folder that is responsible for all data augmentation.
 │    └── build.py  		   - here's the file to make dataloader.
 │    └── collate_batch.py   - here's the file that is responsible for merges a list of samples to form a mini-batch.
